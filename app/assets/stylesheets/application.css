@@ -1,0 +1,168 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ p, h1, h2, h3, h4, h5, h6,ul,ol,button,a{
+    margin: 0px;;
+ }
+
+ .contain {
+   max-width: 1200px;
+   margin-right: auto;
+   margin-left: auto;
+}
+
+.base-grid {
+   display: -ms-grid;
+   display: grid;
+   width: 100%;
+   grid-auto-columns: 1fr;
+   grid-column-gap: 16px;
+   grid-row-gap: 16px;
+   -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   -ms-grid-rows: auto;
+   grid-template-rows: auto;
+}
+
+
+
+
+.vertical-4 {
+   display: flex;
+   flex-direction: column;
+   gap: 4px;
+}
+
+.vertical-8 {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.vertical-12 {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+.vertical-16 {
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+
+.vertical-24 {
+   display: flex;
+   flex-direction: column;
+   gap: 24px;
+}
+
+.vertical-32 {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+}
+
+
+.spacer-20 {
+   height: 20px;
+}
+
+.spacer-40 {
+   height: 40px;
+}
+
+.spacer-60 {
+   height: 60px;
+}
+
+.position-relative {
+   position: relative;
+}
+
+
+
+.overflow-hidden {
+   overflow: hidden;
+}
+
+.hero__content-wrapper {
+   -ms-grid-column: span 6;
+   grid-column-start: span 6;
+   -ms-grid-column-span: 6;
+   grid-column-end: span 6;
+   -ms-grid-row: span 1;
+   grid-row-start: span 1;
+   -ms-grid-row-span: 1;
+   grid-row-end: span 1;
+   -ms-grid-row-align: center;
+   align-self: center;
+}
+
+.hero__image-wrapper {
+   position: relative;
+   -ms-grid-column: span 6;
+   grid-column-start: span 6;
+   -ms-grid-column-span: 6;
+   grid-column-end: span 6;
+   -ms-grid-row: span 1;
+   grid-row-start: span 1;
+   -ms-grid-row-span: 1;
+   grid-row-end: span 1;
+   display: flex;
+   justify-content: center;
+}
+
+.friends-show__btn-wrapper{
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   flex-wrap: wrap;
+   align-items: center;
+}
+
+.friends-index__h1-wrapper{
+
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.friends-index__cards-wrapper{
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+   gap: 20px;
+   width: 100%;
+}
+
+@media (max-width: 992px)
+{
+  .hero__main-image
+   {
+    max-height: 450px;
+    min-width: 100vw !important;
+    object-fit: cover;
+    
+   
+   }
+}
+
+
+
+ 

@@ -1,0 +1,44 @@
+<section>
+    <div class="container">
+        <p style="color: blue"><%= notice %></p>
+        <br/>
+        <%= link_to "Back to friends", friends_path, class:"link-secondary" %>
+        <br/> <br/>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">
+                            <%= @friend.first_name %>
+                        </strong>
+                        <h3 class="mb-0">
+                            <%= @friend.last_name %>
+                            <br/><br/>
+                        </h3>
+                        <p class="card-text mb-auto">
+                            <%= @friend.phone %></p>
+                        <a href="#" class="stretched-link">
+                            <%= @friend.email %></a>
+                        <a href="#" class="stretched-link">
+                            <%= @friend.twitter %></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="friends-show__btn-wrapper">
+
+            
+
+            <%= link_to "Edit this friend", edit_friend_path(@friend), class:"btn btn-outline-primary" %>
+            
+            
+
+            <%= button_to "Destroy this friend", @friend, method: :delete, class:"btn btn-danger" %>
+        </div>
+
+       
+
+    </div>
+</section>

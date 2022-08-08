@@ -1,0 +1,75 @@
+<main>
+    <div class="container">
+
+
+        <p style="color: blue"><%= notice %></p>
+
+        <div class="spacer-40"></div>
+
+        <div class="friends-index__h1-wrapper">
+            <h2>Amigos</h2>
+            <%= link_to "Add New friend", new_friend_path, class:"btn btn-primary" %>
+        </div>
+
+        <div class="spacer-40"></div>
+        
+        <div class="friends-index__cards-wrapper">
+            <% @friends.each do |friend| %>
+                <div class="friends-index__cards">
+                    <div class="cards border" style="padding:20px;">
+
+                        <div class="caption">
+                            <h3 class="text-primary"><%= friend.first_name %></h3>
+                            <h5><%= friend.last_name %></h5>
+                            <br/>
+
+                            <div class="vertical-12">
+                                <div>
+                                    <small class="small">
+                                        Phone:
+                                    </small>
+                                    <p>
+                                        <%= friend.phone%>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <small class="small">
+                                        Email:
+                                    </small>
+                                    <p>
+                                        <%= friend.email%>
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <small class="small">
+                                        Twitter:
+                                    </small>
+                                    <%= link_to friend.twitter, "https://twitter.com/" + friend.twitter, target:"_blabk", style:"display:block;" %>
+                                </div>
+
+
+                            </div>
+
+                            <br/>
+                            <div class="vertical-8">
+                                <%= link_to "Edit this friend", edit_friend_path(friend.id), class:"btn btn-outline-primary d-block" %>
+                                <p style="text-align: center;">
+                                    <small> Last edited: <%= friend.updated_at.strftime("%d/%m/%y") %> </small>
+                                </p>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </div>
+
+            <% end %>
+        </div>
+
+        <br/>
+
+
+    </div>
+</main>

@@ -1,0 +1,63 @@
+<%= form_with(model: friend) do |form| %>
+    <% if friend.errors.any? %>
+        <div style="color: red">
+            <h2><%= pluralize(friend.errors.count, "error") %>
+                prohibited this friend from being saved:</h2>
+
+            <ul>
+                <% friend.errors.each do |error| %>
+                    <li><%= error.full_message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+
+    <div>
+        <div class="row mb-3">
+            <%= form.label :first_name, class:"col-sm-2 col-form-label" %>
+            <div class="col-sm-10">
+                <%= form.text_field :first_name, class:"form-control" %>
+            </div>
+            <br/>
+        </div>
+
+        <div class="row mb-3">
+            <%= form.label :last_name, class:"col-sm-2 col-form-label" %>
+            <div class="col-sm-10">
+                <%= form.text_field :last_name, class:"form-control" %>
+            </div>
+            <br/>
+        </div>
+
+        <div class="row mb-3">
+            <%= form.label :email, class:"col-sm-2 col-form-label" %>
+            <div class="col-sm-10">
+                <%= form.email_field :email, class:"form-control" %>
+            </div>
+            <br/>
+        </div>
+
+        <div class="row mb-3">
+            <%= form.label :phone, class:"col-sm-2 col-form-label" %>
+            <div class="col-sm-10">
+                <%= form.phone_field :phone, class:"form-control" %>
+            </div>
+            <br/>
+        </div>
+
+        <div class="row mb-3">
+            <%= form.label :twitter, class:"col-sm-2 col-form-label" %>
+            <div class="col-sm-10">
+                <%= form.text_field :twitter, class:"form-control" %>
+            </div>
+            <br/>
+        </div>
+
+        <div>
+            <%= form.submit class:"btn btn-outline-primary" %>
+        </div>
+
+
+    </div>
+<% end %>
